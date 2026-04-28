@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HeartGuard | Mood Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="mood-styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="mood-shell">
+    <aside class="mood-sidebar">
+      <div class="mood-sidebar-top">
+        <a class="mood-brand" href="index.html" aria-label="HeartGuard home">
+          <span class="mood-brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 21.35 10.55 20C5.4 15.24 2 12.09 2 8.25 2 5.12 4.42 3 7.25 3c1.8 0 3.53.91 4.75 2.34C13.22 3.91 14.95 3 16.75 3 19.58 3 22 5.12 22 8.25c0 3.84-3.4 6.99-8.55 11.75L12 21.35Z"></path>
+            </svg>
+          </span>
+          <span>HeartGuard</span>
+        </a>
+        <button class="mood-close" type="button" aria-label="Close sidebar">&times;</button>
+      </div>
+
+      <nav class="mood-nav" aria-label="Primary">
+        <a class="mood-nav-item" href="index.html">
+          <span class="mood-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 10.5L12 4L20 10.5"></path>
+              <path d="M6 9.5V20H18V9.5"></path>
+            </svg>
+          </span>
+          <span>Home</span>
+        </a>
+
+        <a class="mood-nav-item" href="dashboard.html">
+          <span class="mood-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 4H10V10H4V4Z"></path>
+              <path d="M14 4H20V10H14V4Z"></path>
+              <path d="M4 14H10V20H4V14Z"></path>
+              <path d="M14 14H20V20H14V14Z"></path>
+            </svg>
+          </span>
+          <span>Dashboard</span>
+        </a>
+
+        <a class="mood-nav-item" href="predict.html">
+          <span class="mood-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 21.35 10.55 20C5.4 15.24 2 12.09 2 8.25 2 5.12 4.42 3 7.25 3c1.8 0 3.53.91 4.75 2.34C13.22 3.91 14.95 3 16.75 3 19.58 3 22 5.12 22 8.25c0 3.84-3.4 6.99-8.55 11.75L12 21.35Z"></path>
+            </svg>
+          </span>
+          <span>Predict</span>
+        </a>
+
+        <a class="mood-nav-item" href="chatbot.html">
+          <span class="mood-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 11.5C21 16.19 16.97 20 12 20C10.78 20 9.61 19.77 8.55 19.35L4 20.5L5.15 16.33C4.42 14.95 4 13.28 4 11.5C4 6.81 8.03 3 13 3C17.97 3 21 6.81 21 11.5Z"></path>
+            </svg>
+          </span>
+          <span>AI Assistant</span>
+        </a>
+
+        <a class="mood-nav-item active" href="mood.html">
+          <span class="mood-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 21C15.87 21 19 17.87 19 14C19 10.13 15.87 7 12 7C8.13 7 5 10.13 5 14C5 17.87 8.13 21 12 21Z"></path>
+              <path d="M12 3V7"></path>
+              <path d="M21 14H17"></path>
+            </svg>
+          </span>
+          <span>Mood Tracker</span>
+        </a>
+
+        <a class="mood-nav-item" href="diet.html">
+          <span class="mood-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M7 3V11"></path>
+              <path d="M11 3V11"></path>
+              <path d="M9 11V21"></path>
+              <path d="M17 3C15.34 3 14 4.34 14 6V10C14 11.66 15.34 13 17 13H18V21"></path>
+            </svg>
+          </span>
+          <span>Diet Plan</span>
+        </a>
+
+        <a class="mood-nav-item" href="monitoring.html">
+          <span class="mood-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 13H8L11 4L14 20L17 10H21"></path>
+            </svg>
+          </span>
+          <span>Monitoring</span>
+        </a>
+
+        <a class="mood-nav-item" href="quiz.html">
+          <span class="mood-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3H15"></path>
+              <path d="M12 3V12"></path>
+              <path d="M7 8H17"></path>
+              <path d="M5 21H19"></path>
+            </svg>
+          </span>
+          <span>Quiz</span>
+        </a>
+
+        <a class="mood-nav-item" href="community.html">
+          <span class="mood-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M16 11C17.66 11 19 9.66 19 8S17.66 5 16 5 13 6.34 13 8 14.34 11 16 11Z"></path>
+              <path d="M8 13C10.21 13 12 11.21 12 9S10.21 5 8 5 4 6.79 4 9 5.79 13 8 13Z"></path>
+              <path d="M8 15C4.69 15 2 17.24 2 20V21H14V20C14 17.24 11.31 15 8 15Z"></path>
+              <path d="M16 13C14.93 13 13.93 13.28 13.07 13.77C14.26 14.79 15 16.28 15 18V21H22V20C22 16.69 19.31 14 16 14"></path>
+            </svg>
+          </span>
+          <span>Community</span>
+        </a>
+
+        <a class="mood-nav-item" href="breathing.html">
+          <span class="mood-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 8H14"></path>
+              <path d="M2 12H17"></path>
+              <path d="M5 16H12"></path>
+              <path d="M19 7C20.66 7 22 8.34 22 10C22 13 18 14 18 17"></path>
+            </svg>
+          </span>
+          <span>Breathing</span>
+        </a>
+
+        <a class="mood-nav-item" href="medications.html">
+          <span class="mood-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M10 13L14 9"></path>
+              <path d="M8.5 6.5L17.5 15.5"></path>
+              <path d="M7.05 14.95C5.68 13.58 5.68 11.35 7.05 9.98L9.88 7.15C11.25 5.78 13.47 5.78 14.84 7.15C16.21 8.52 16.21 10.75 14.84 12.12L12.01 14.95C10.64 16.32 8.42 16.32 7.05 14.95Z"></path>
+            </svg>
+          </span>
+          <span>Medications</span>
+        </a>
+
+        <a class="mood-nav-item" href="about.html">
+          <span class="mood-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17V11"></path>
+              <path d="M12 7H12.01"></path>
+              <path d="M12 22C17.52 22 22 17.52 22 12S17.52 2 12 2 2 6.48 2 12 6.48 22 12 22Z"></path>
+            </svg>
+          </span>
+          <span>About</span>
+        </a>
+      </nav>
+
+      <div class="mood-sidebar-bottom">
+        <a class="mood-sos-button" href="sos.html">Emergency SOS</a>
+        <a class="mood-logout-link" href="index.html">
+          <span class="mood-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M15 16L20 12L15 8"></path>
+              <path d="M20 12H9"></path>
+              <path d="M12 19H5V5H12"></path>
+            </svg>
+          </span>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <main class="mood-content">
+      <header class="mood-header">
+        <div class="mood-tag">DAILY CHECK-IN</div>
+        <h1>Mood Tracker</h1>
+        <p>Track how you feel each day and identify emotional patterns</p>
+      </header>
+
+      <section class="mood-checkin-card">
+        <div class="checkin-grid">
+          <div class="date-card">
+            <label for="moodDate">Select Date</label>
+            <div class="date-input-wrap">
+              <input id="moodDate" type="date">
+            </div>
+          </div>
+
+          <div class="mood-selector-card">
+            <h2 id="moodPromptText">How are you feeling today?</h2>
+            <div class="mood-options" id="moodOptions">
+              <button class="mood-option" type="button" data-mood="Great" data-emoji="😄">
+                <span class="mood-emoji">😄</span>
+                <span class="mood-label">Great</span>
+              </button>
+              <button class="mood-option" type="button" data-mood="Good" data-emoji="😊">
+                <span class="mood-emoji">😊</span>
+                <span class="mood-label">Good</span>
+              </button>
+              <button class="mood-option" type="button" data-mood="Okay" data-emoji="😐">
+                <span class="mood-emoji">😐</span>
+                <span class="mood-label">Okay</span>
+              </button>
+              <button class="mood-option" type="button" data-mood="Low" data-emoji="😟">
+                <span class="mood-emoji">😟</span>
+                <span class="mood-label">Low</span>
+              </button>
+              <button class="mood-option" type="button" data-mood="Very Low" data-emoji="😢">
+                <span class="mood-emoji">😢</span>
+                <span class="mood-label">Very Low</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="save-row">
+          <button id="saveMoodButton" class="save-mood-button" type="button">Save Mood</button>
+          <div id="saveMoodStatus" class="save-status" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="mood-insights-grid">
+        <article class="insight-card">
+          <div class="insight-header">
+            <h3>Mood Frequency</h3>
+            <span id="moodCountLabel">0 entries</span>
+          </div>
+          <div class="chart-wrap">
+            <canvas id="moodFrequencyChart"></canvas>
+          </div>
+        </article>
+
+        <article class="insight-card">
+          <div class="insight-header">
+            <h3>Recent Entries</h3>
+          </div>
+          <div id="recentEntries" class="recent-entries"></div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="mood-script.js"></script>
+</body>
+</html>

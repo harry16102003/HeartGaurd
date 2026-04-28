@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HeartGuard | Predict</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="predict-styles.css">
+</head>
+<body>
+  <div class="predict-shell">
+    <aside class="predict-sidebar">
+      <div class="predict-sidebar-top">
+        <a class="predict-sidebar-brand" href="index.html" aria-label="HeartGuard home">
+          <span class="predict-sidebar-brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 21.35 10.55 20C5.4 15.24 2 12.09 2 8.25 2 5.12 4.42 3 7.25 3c1.8 0 3.53.91 4.75 2.34C13.22 3.91 14.95 3 16.75 3 19.58 3 22 5.12 22 8.25c0 3.84-3.4 6.99-8.55 11.75L12 21.35Z"></path>
+            </svg>
+          </span>
+          <span>HeartGuard</span>
+        </a>
+        <button class="predict-sidebar-close" type="button" aria-label="Close sidebar">&times;</button>
+      </div>
+
+      <nav class="predict-sidebar-nav" aria-label="Primary">
+        <a class="predict-nav-item" href="index.html">
+          <span class="predict-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 10.5L12 4L20 10.5"></path>
+              <path d="M6 9.5V20H18V9.5"></path>
+            </svg>
+          </span>
+          <span>Home</span>
+        </a>
+
+        <a class="predict-nav-item" href="dashboard.html">
+          <span class="predict-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 4H10V10H4V4Z"></path>
+              <path d="M14 4H20V10H14V4Z"></path>
+              <path d="M4 14H10V20H4V14Z"></path>
+              <path d="M14 14H20V20H14V14Z"></path>
+            </svg>
+          </span>
+          <span>Dashboard</span>
+        </a>
+
+        <a class="predict-nav-item active" href="predict.html">
+          <span class="predict-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 21.35 10.55 20C5.4 15.24 2 12.09 2 8.25 2 5.12 4.42 3 7.25 3c1.8 0 3.53.91 4.75 2.34C13.22 3.91 14.95 3 16.75 3 19.58 3 22 5.12 22 8.25c0 3.84-3.4 6.99-8.55 11.75L12 21.35Z"></path>
+            </svg>
+          </span>
+          <span>Predict</span>
+        </a>
+
+        <a class="predict-nav-item" href="chatbot.html">
+          <span class="predict-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 11.5C21 16.19 16.97 20 12 20C10.78 20 9.61 19.77 8.55 19.35L4 20.5L5.15 16.33C4.42 14.95 4 13.28 4 11.5C4 6.81 8.03 3 13 3C17.97 3 21 6.81 21 11.5Z"></path>
+            </svg>
+          </span>
+          <span>AI Assistant</span>
+        </a>
+
+        <a class="predict-nav-item" href="mood.html">
+          <span class="predict-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 21C15.87 21 19 17.87 19 14C19 10.13 15.87 7 12 7C8.13 7 5 10.13 5 14C5 17.87 8.13 21 12 21Z"></path>
+              <path d="M12 3V7"></path>
+              <path d="M21 14H17"></path>
+            </svg>
+          </span>
+          <span>Mood Tracker</span>
+        </a>
+
+        <a class="predict-nav-item" href="diet.html">
+          <span class="predict-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M7 3V11"></path>
+              <path d="M11 3V11"></path>
+              <path d="M9 11V21"></path>
+              <path d="M17 3C15.34 3 14 4.34 14 6V10C14 11.66 15.34 13 17 13H18V21"></path>
+            </svg>
+          </span>
+          <span>Diet Plan</span>
+        </a>
+
+        <a class="predict-nav-item" href="monitoring.html">
+          <span class="predict-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 13H8L11 4L14 20L17 10H21"></path>
+            </svg>
+          </span>
+          <span>Monitoring</span>
+        </a>
+
+        <a class="predict-nav-item" href="quiz.html">
+          <span class="predict-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3H15"></path>
+              <path d="M12 3V12"></path>
+              <path d="M7 8H17"></path>
+              <path d="M5 21H19"></path>
+            </svg>
+          </span>
+          <span>Quiz</span>
+        </a>
+
+        <a class="predict-nav-item" href="community.html">
+          <span class="predict-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M16 11C17.66 11 19 9.66 19 8S17.66 5 16 5 13 6.34 13 8 14.34 11 16 11Z"></path>
+              <path d="M8 13C10.21 13 12 11.21 12 9S10.21 5 8 5 4 6.79 4 9 5.79 13 8 13Z"></path>
+              <path d="M8 15C4.69 15 2 17.24 2 20V21H14V20C14 17.24 11.31 15 8 15Z"></path>
+              <path d="M16 13C14.93 13 13.93 13.28 13.07 13.77C14.26 14.79 15 16.28 15 18V21H22V20C22 16.69 19.31 14 16 14"></path>
+            </svg>
+          </span>
+          <span>Community</span>
+        </a>
+
+        <a class="predict-nav-item" href="breathing.html">
+          <span class="predict-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 8H14"></path>
+              <path d="M2 12H17"></path>
+              <path d="M5 16H12"></path>
+              <path d="M19 7C20.66 7 22 8.34 22 10C22 13 18 14 18 17"></path>
+            </svg>
+          </span>
+          <span>Breathing</span>
+        </a>
+
+        <a class="predict-nav-item" href="medications.html">
+          <span class="predict-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M10 13L14 9"></path>
+              <path d="M8.5 6.5L17.5 15.5"></path>
+              <path d="M7.05 14.95C5.68 13.58 5.68 11.35 7.05 9.98L9.88 7.15C11.25 5.78 13.47 5.78 14.84 7.15C16.21 8.52 16.21 10.75 14.84 12.12L12.01 14.95C10.64 16.32 8.42 16.32 7.05 14.95Z"></path>
+            </svg>
+          </span>
+          <span>Medications</span>
+        </a>
+
+        <a class="predict-nav-item" href="about.html">
+          <span class="predict-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17V11"></path>
+              <path d="M12 7H12.01"></path>
+              <path d="M12 22C17.52 22 22 17.52 22 12S17.52 2 12 2 2 6.48 2 12 6.48 22 12 22Z"></path>
+            </svg>
+          </span>
+          <span>About</span>
+        </a>
+      </nav>
+
+      <div class="predict-sidebar-bottom">
+        <a class="predict-sos-button" href="sos.html">Emergency SOS</a>
+        <a class="predict-logout-link" href="index.html">
+          <span class="predict-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M15 16L20 12L15 8"></path>
+              <path d="M20 12H9"></path>
+              <path d="M12 19H5V5H12"></path>
+            </svg>
+          </span>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <main class="predict-content">
+      <header class="predict-header">
+        <h1>Heart Risk Prediction</h1>
+        <p>Enter any 2 or more health metrics for AI-powered risk analysis. More values improve confidence.</p>
+      </header>
+
+      <section class="predict-form-card">
+        <form id="predictForm" class="predict-form">
+          <p class="predict-form-hint">
+            You can start with just 2 values and still get a prediction. Add more details when available for a stronger estimate.
+          </p>
+
+          <div class="predict-grid">
+            <label class="field-group">
+              <span>Age</span>
+              <input id="age" name="age" type="number" placeholder="e.g. 45">
+            </label>
+
+            <label class="field-group">
+              <span>BMI</span>
+              <input id="bmi" name="bmi" type="number" step="0.1" placeholder="e.g. 25">
+            </label>
+
+            <label class="field-group">
+              <span>Cholesterol</span>
+              <input id="cholesterol" name="cholesterol" type="number" placeholder="e.g. 200">
+            </label>
+
+            <label class="field-group">
+              <span>Systolic BP</span>
+              <input id="systolic_bp" name="systolic_bp" type="number" placeholder="e.g. 120">
+            </label>
+
+            <label class="field-group">
+              <span>Diastolic BP</span>
+              <input id="diastolic_bp" name="diastolic_bp" type="number" placeholder="e.g. 80">
+            </label>
+
+            <label class="field-group">
+              <span>Glucose</span>
+              <input id="glucose" name="glucose" type="number" placeholder="e.g. 100">
+            </label>
+
+            <label class="field-group">
+              <span>Physical Activity (hrs/week)</span>
+              <input id="physical_activity" name="physical_activity" type="number" step="0.1" placeholder="e.g. 3">
+            </label>
+
+            <label class="field-group">
+              <span>Sex</span>
+              <select id="sex" name="sex">
+                <option value="">Select if known</option>
+                <option value="1">Male</option>
+                <option value="0">Female</option>
+              </select>
+            </label>
+
+            <label class="field-group">
+              <span>Smoking</span>
+              <select id="smoking" name="smoking">
+                <option value="">Select if known</option>
+                <option value="0">Non-Smoker</option>
+                <option value="1">Smoker</option>
+              </select>
+            </label>
+
+            <label class="field-group">
+              <span>Hypertension</span>
+              <select id="hypertension" name="hypertension">
+                <option value="">Select if known</option>
+                <option value="0">Normal</option>
+                <option value="1">Hypertension</option>
+              </select>
+            </label>
+
+            <label class="field-group">
+              <span>Diabetes</span>
+              <select id="diabetes" name="diabetes">
+                <option value="">Select if known</option>
+                <option value="0">Non-Diabetic</option>
+                <option value="1">Diabetic</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="advanced-section">
+            <h2>Advanced (Optional)</h2>
+
+            <div class="advanced-grid">
+              <label class="field-group">
+                <span>Heart Rate</span>
+                <input id="heart_rate" name="heart_rate" type="number" placeholder="e.g. 72">
+              </label>
+
+              <label class="field-group">
+                <span>Ejection Fraction</span>
+                <input id="ejection_fraction" name="ejection_fraction" type="number" placeholder="e.g. 55">
+              </label>
+
+              <label class="field-group">
+                <span>Serum Creatinine</span>
+                <input id="serum_creatinine" name="serum_creatinine" type="number" step="0.1" placeholder="e.g. 1.0">
+              </label>
+            </div>
+          </div>
+
+          <button id="predictButton" class="predict-button" type="submit">
+            <span class="button-label">Predict Risk</span>
+            <span class="button-loader" aria-hidden="true"></span>
+          </button>
+
+          <p id="predictStatus" class="predict-status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section id="predictionResult" class="prediction-result hidden" aria-live="polite">
+        <div id="resultBadge" class="result-badge tone-high">AI Assessment</div>
+
+        <div id="resultIconWrap" class="result-icon-wrap tone-high">
+          <svg id="resultIcon" class="result-icon tone-high" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3L21 19H3L12 3Z"></path>
+            <path d="M12 9V13"></path>
+            <path d="M12 17H12.01"></path>
+          </svg>
+        </div>
+
+        <div class="result-score" id="resultScore">0%</div>
+        <div class="result-label" id="resultLabel">High Risk</div>
+        <div class="result-meta-row">
+          <div class="result-confidence" id="resultConfidence">Confidence: 0%</div>
+          <div class="result-coverage" id="resultCoverage">Inputs used: 0/14</div>
+          <div class="result-source" id="resultSource">Source: AI engine</div>
+        </div>
+        <div class="result-recommendation" id="resultRecommendation"></div>
+
+        <a id="dietPlanLink" class="diet-plan-link hidden" href="diet.html">
+          View Recommended Diet Plan
+        </a>
+
+        <div class="result-progress-track">
+          <div id="resultProgressBar" class="result-progress-bar fill-high" style="width: 0%;"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="predict-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HeartGuard | Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login-styles.css">
+</head>
+<body>
+  <main class="login-shell">
+    <div class="login-ambient login-ambient-left"></div>
+    <div class="login-ambient login-ambient-right"></div>
+
+    <section class="login-card" aria-labelledby="login-title">
+      <a class="login-brand" href="index.html" aria-label="HeartGuard home">
+        <span class="login-brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 21.35 10.55 20C5.4 15.24 2 12.09 2 8.25 2 5.12 4.42 3 7.25 3c1.8 0 3.53.91 4.75 2.34C13.22 3.91 14.95 3 16.75 3 19.58 3 22 5.12 22 8.25c0 3.84-3.4 6.99-8.55 11.75L12 21.35Z"></path>
+          </svg>
+        </span>
+        <span>HeartGuard</span>
+      </a>
+
+      <header class="login-copy">
+        <h1 id="login-title">Welcome Back</h1>
+        <p>Sign in to your health dashboard</p>
+      </header>
+
+      <form class="login-form" id="loginForm">
+        <label class="input-shell" for="email">
+          <span class="input-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 6H20V18H4V6Z"></path>
+              <path d="M4 8L12 13L20 8"></path>
+            </svg>
+          </span>
+          <input id="email" name="email" type="email" placeholder="Email" autocomplete="email" required>
+        </label>
+
+        <label class="input-shell" for="password">
+          <span class="input-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M7 10V7C7 4.79 8.79 3 11 3H13C15.21 3 17 4.79 17 7V10"></path>
+              <path d="M5 10H19V20H5V10Z"></path>
+            </svg>
+          </span>
+          <input id="password" name="password" type="password" placeholder="Password" autocomplete="current-password" required>
+        </label>
+
+        <button class="sign-in-button" type="submit">Sign In</button>
+      </form>
+
+      <p class="signup-copy">
+        Don't have an account?
+        <a href="dashboard.html">Get Started</a>
+      </p>
+    </section>
+  </main>
+
+  <script src="login-script.js"></script>
+</body>
+</html>

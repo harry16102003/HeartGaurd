@@ -1,0 +1,200 @@
+.hg-login-shell {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 44%, rgba(15, 226, 204, 0.1), transparent 28%),
+    radial-gradient(circle at 68% 56%, rgba(36, 173, 255, 0.06), transparent 22%),
+    linear-gradient(180deg, #0b1016 0%, #0b1117 100%);
+  color: #eef3f7;
+  font-family: "Outfit", sans-serif;
+}
+
+.hg-login-shell * {
+  box-sizing: border-box;
+}
+
+.hg-login-ambient {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(90px);
+  pointer-events: none;
+  opacity: 0.42;
+}
+
+.hg-login-ambient-left {
+  width: 280px;
+  height: 280px;
+  left: calc(50% - 260px);
+  top: calc(50% - 120px);
+  background: rgba(19, 221, 202, 0.08);
+}
+
+.hg-login-ambient-right {
+  width: 320px;
+  height: 320px;
+  right: calc(50% - 320px);
+  bottom: calc(50% - 160px);
+  background: rgba(19, 221, 202, 0.06);
+}
+
+.hg-login-card {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 560px);
+  padding: 42px 40px 40px;
+  border: 1px solid rgba(45, 67, 88, 0.72);
+  border-radius: 18px;
+  background: rgba(18, 22, 31, 0.96);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.38);
+}
+
+.hg-login-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: inherit;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.hg-login-brand-mark {
+  width: 38px;
+  height: 38px;
+}
+
+.hg-login-brand-mark svg {
+  width: 100%;
+  height: 100%;
+  fill: #13ddca;
+}
+
+.hg-login-copy {
+  margin-top: 34px;
+  text-align: center;
+}
+
+.hg-login-copy h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.hg-login-copy p {
+  margin: 12px 0 0;
+  color: #737d92;
+  font-size: 1.12rem;
+}
+
+.hg-login-form {
+  display: grid;
+  gap: 20px;
+  margin-top: 38px;
+}
+
+.hg-input-shell {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 64px;
+  padding: 0 18px;
+  border: 1px solid rgba(53, 62, 79, 0.6);
+  border-radius: 16px;
+  background: #232832;
+  transition: border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.hg-input-shell:focus-within {
+  border-color: rgba(19, 221, 202, 0.36);
+  box-shadow: 0 0 0 4px rgba(19, 221, 202, 0.08);
+}
+
+.hg-input-icon {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  color: #7e899c;
+}
+
+.hg-input-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.hg-input-shell input {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #dfe5f1;
+  font: inherit;
+  font-size: 1.14rem;
+}
+
+.hg-input-shell input::placeholder {
+  color: #798397;
+}
+
+.hg-sign-in-button {
+  min-height: 62px;
+  border: 0;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #18dfc5, #18d4c7);
+  color: #071217;
+  font: inherit;
+  font-size: 1.18rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 14px 34px rgba(24, 212, 199, 0.28);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.hg-sign-in-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(24, 212, 199, 0.34);
+}
+
+.hg-signup-copy {
+  margin: 28px 0 0;
+  text-align: center;
+  color: #737d92;
+  font-size: 1.04rem;
+}
+
+.hg-signup-copy a {
+  margin-left: 6px;
+  color: #13ddca;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+@media (max-width: 640px) {
+  .hg-login-shell {
+    padding: 20px;
+  }
+
+  .hg-login-card {
+    padding: 32px 22px 28px;
+  }
+
+  .hg-login-brand {
+    font-size: 1.75rem;
+  }
+
+  .hg-input-shell,
+  .hg-sign-in-button {
+    min-height: 58px;
+  }
+}

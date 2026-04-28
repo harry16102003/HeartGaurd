@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HeartGuard | Health Assessment Quiz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="quiz-styles.css">
+</head>
+<body>
+  <div class="quiz-shell">
+    <aside class="quiz-sidebar">
+      <div class="quiz-sidebar-top">
+        <a class="quiz-brand" href="index.html" aria-label="HeartGuard home">
+          <span class="quiz-brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 21.35 10.55 20C5.4 15.24 2 12.09 2 8.25 2 5.12 4.42 3 7.25 3c1.8 0 3.53.91 4.75 2.34C13.22 3.91 14.95 3 16.75 3 19.58 3 22 5.12 22 8.25c0 3.84-3.4 6.99-8.55 11.75L12 21.35Z"></path>
+            </svg>
+          </span>
+          <span>HeartGuard</span>
+        </a>
+        <button class="quiz-close" type="button" aria-label="Close sidebar">&times;</button>
+      </div>
+
+      <nav class="quiz-nav" aria-label="Primary">
+        <a class="quiz-nav-item" href="index.html">
+          <span class="quiz-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 10.5L12 4L20 10.5"></path>
+              <path d="M6 9.5V20H18V9.5"></path>
+            </svg>
+          </span>
+          <span>Home</span>
+        </a>
+
+        <a class="quiz-nav-item" href="dashboard.html">
+          <span class="quiz-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 4H10V10H4V4Z"></path>
+              <path d="M14 4H20V10H14V4Z"></path>
+              <path d="M4 14H10V20H4V14Z"></path>
+              <path d="M14 14H20V20H14V14Z"></path>
+            </svg>
+          </span>
+          <span>Dashboard</span>
+        </a>
+
+        <a class="quiz-nav-item" href="predict.html">
+          <span class="quiz-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 21.35 10.55 20C5.4 15.24 2 12.09 2 8.25 2 5.12 4.42 3 7.25 3c1.8 0 3.53.91 4.75 2.34C13.22 3.91 14.95 3 16.75 3 19.58 3 22 5.12 22 8.25c0 3.84-3.4 6.99-8.55 11.75L12 21.35Z"></path>
+            </svg>
+          </span>
+          <span>Predict</span>
+        </a>
+
+        <a class="quiz-nav-item" href="chatbot.html">
+          <span class="quiz-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 11.5C21 16.19 16.97 20 12 20C10.78 20 9.61 19.77 8.55 19.35L4 20.5L5.15 16.33C4.42 14.95 4 13.28 4 11.5C4 6.81 8.03 3 13 3C17.97 3 21 6.81 21 11.5Z"></path>
+            </svg>
+          </span>
+          <span>AI Assistant</span>
+        </a>
+
+        <a class="quiz-nav-item" href="mood.html">
+          <span class="quiz-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 21C15.87 21 19 17.87 19 14C19 10.13 15.87 7 12 7C8.13 7 5 10.13 5 14C5 17.87 8.13 21 12 21Z"></path>
+              <path d="M12 3V7"></path>
+              <path d="M21 14H17"></path>
+            </svg>
+          </span>
+          <span>Mood Tracker</span>
+        </a>
+
+        <a class="quiz-nav-item" href="diet.html">
+          <span class="quiz-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M7 3V11"></path>
+              <path d="M11 3V11"></path>
+              <path d="M9 11V21"></path>
+              <path d="M17 3C15.34 3 14 4.34 14 6V10C14 11.66 15.34 13 17 13H18V21"></path>
+            </svg>
+          </span>
+          <span>Diet Plan</span>
+        </a>
+
+        <a class="quiz-nav-item" href="monitoring.html">
+          <span class="quiz-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 13H8L11 4L14 20L17 10H21"></path>
+            </svg>
+          </span>
+          <span>Monitoring</span>
+        </a>
+
+        <a class="quiz-nav-item active" href="quiz.html">
+          <span class="quiz-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3H15"></path>
+              <path d="M12 3V12"></path>
+              <path d="M7 8H17"></path>
+              <path d="M5 21H19"></path>
+            </svg>
+          </span>
+          <span>Quiz</span>
+        </a>
+
+        <a class="quiz-nav-item" href="community.html">
+          <span class="quiz-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M16 11C17.66 11 19 9.66 19 8S17.66 5 16 5 13 6.34 13 8 14.34 11 16 11Z"></path>
+              <path d="M8 13C10.21 13 12 11.21 12 9S10.21 5 8 5 4 6.79 4 9 5.79 13 8 13Z"></path>
+              <path d="M8 15C4.69 15 2 17.24 2 20V21H14V20C14 17.24 11.31 15 8 15Z"></path>
+              <path d="M16 13C14.93 13 13.93 13.28 13.07 13.77C14.26 14.79 15 16.28 15 18V21H22V20C22 16.69 19.31 15 16 14"></path>
+            </svg>
+          </span>
+          <span>Community</span>
+        </a>
+
+        <a class="quiz-nav-item" href="breathing.html">
+          <span class="quiz-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 8H14"></path>
+              <path d="M2 12H17"></path>
+              <path d="M5 16H12"></path>
+              <path d="M19 7C20.66 7 22 8.34 22 10C22 13 18 14 18 17"></path>
+            </svg>
+          </span>
+          <span>Breathing</span>
+        </a>
+
+        <a class="quiz-nav-item" href="medications.html">
+          <span class="quiz-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M10 13L14 9"></path>
+              <path d="M8.5 6.5L17.5 15.5"></path>
+              <path d="M7.05 14.95C5.68 13.58 5.68 11.35 7.05 9.98L9.88 7.15C11.25 5.78 13.47 5.78 14.84 7.15C16.21 8.52 16.21 10.75 14.84 12.12L12.01 14.95C10.64 16.32 8.42 16.32 7.05 14.95Z"></path>
+            </svg>
+          </span>
+          <span>Medications</span>
+        </a>
+
+        <a class="quiz-nav-item" href="about.html">
+          <span class="quiz-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 17V11"></path>
+              <path d="M12 7H12.01"></path>
+              <path d="M12 22C17.52 22 22 17.52 22 12S17.52 2 12 2 2 6.48 2 12 6.48 22 12 22Z"></path>
+            </svg>
+          </span>
+          <span>About</span>
+        </a>
+      </nav>
+
+      <div class="quiz-sidebar-bottom">
+        <a class="quiz-sos-button" href="sos.html">Emergency SOS</a>
+        <a class="quiz-logout-link" href="index.html">
+          <span class="quiz-nav-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M15 16L20 12L15 8"></path>
+              <path d="M20 12H9"></path>
+              <path d="M12 19H5V5H12"></path>
+            </svg>
+          </span>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <main class="quiz-content">
+      <header class="quiz-header">
+        <h1>
+          <span class="quiz-title-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3H15V6H19C20.1 6 21 6.9 21 8V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V8C3 6.9 3.9 6 5 6H9V3Z"></path>
+              <path d="M9 11H15"></path>
+              <path d="M9 15H13"></path>
+            </svg>
+          </span>
+          Health Assessment Quiz
+        </h1>
+        <p>Answer these questions to assess your overall health risk</p>
+      </header>
+
+      <section id="quizCard" class="quiz-card">
+        <div class="quiz-progress-row">
+          <span id="quizProgressLabel">Question 1 of 8</span>
+          <div class="progress-track">
+            <div id="quizProgressFill" class="progress-fill"></div>
+          </div>
+        </div>
+
+        <h2 id="quizQuestionText" class="quiz-question"></h2>
+
+        <div id="quizOptions" class="quiz-options"></div>
+      </section>
+
+      <section id="quizResultCard" class="quiz-result-card hidden">
+        <div id="quizResultIcon" class="result-icon"></div>
+        <h2 id="quizResultTitle"></h2>
+        <p id="quizResultSummary" class="result-summary"></p>
+        <p id="quizResultScore" class="result-score"></p>
+
+        <div class="result-progress">
+          <div id="quizResultProgressFill" class="result-progress-fill"></div>
+        </div>
+
+        <div class="result-highlights">
+          <h3>Focus Areas</h3>
+          <div id="quizResultHighlights" class="highlight-list"></div>
+        </div>
+
+        <button id="retakeQuizButton" class="retake-button" type="button">Retake Quiz</button>
+      </section>
+    </main>
+  </div>
+
+  <script src="quiz-script.js"></script>
+</body>
+</html>

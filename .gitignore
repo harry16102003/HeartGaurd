@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+.ipynb_checkpoints/
+
+backend/models/*.pkl
+data/final/predictions_history.xlsx
+
+.DS_Store
+Thumbs.db

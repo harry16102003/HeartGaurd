@@ -1,0 +1,222 @@
+.hg-assistant-shell {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 55% 12%, rgba(17, 223, 205, 0.07), transparent 30%),
+    linear-gradient(180deg, #0a1016 0%, #0b1016 100%);
+  color: #f0f4f9;
+  font-family: "Outfit", sans-serif;
+}
+
+.hg-assistant-shell * {
+  box-sizing: border-box;
+}
+
+.hg-assistant-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #0f141b;
+  border-right: 1px solid rgba(35, 49, 67, 0.8);
+  min-height: 100vh;
+  padding: 14px 10px 10px;
+}
+
+.hg-assistant-brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hg-assistant-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: inherit;
+  text-decoration: none;
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+.hg-assistant-heart {
+  color: #11dfcd;
+}
+
+.hg-assistant-close {
+  border: 0;
+  background: transparent;
+  color: #7d879d;
+  font-size: 1.6rem;
+}
+
+.hg-assistant-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 14px;
+}
+
+.hg-assistant-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 38px;
+  padding: 0 12px;
+  border-radius: 12px;
+  color: inherit;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.hg-assistant-nav-item.active {
+  background: rgba(10, 72, 65, 0.52);
+  color: #11dfcd;
+  font-weight: 600;
+}
+
+.hg-assistant-nav-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+.hg-assistant-sidebar-bottom {
+  border-top: 1px solid rgba(29, 42, 58, 0.86);
+  padding-top: 8px;
+}
+
+.hg-assistant-sos,
+.hg-assistant-logout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 14px;
+}
+
+.hg-assistant-sos {
+  min-height: 44px;
+  background: #ef2727;
+  color: #fff5f5;
+  font-size: 0.98rem;
+  font-weight: 700;
+}
+
+.hg-assistant-logout {
+  justify-content: flex-start;
+  color: #c8ceda;
+  min-height: 38px;
+  margin-top: 10px;
+  padding-left: 8px;
+}
+
+.hg-assistant-main {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  min-height: 100vh;
+}
+
+.hg-assistant-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 22px 28px 18px;
+  border-bottom: 1px solid rgba(36, 51, 69, 0.4);
+}
+
+.hg-assistant-header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 2.8vw, 3rem);
+}
+
+.hg-assistant-header p {
+  margin: 10px 0 0;
+  color: #8a95ab;
+}
+
+.hg-assistant-trash {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  color: #8a95ab;
+}
+
+.hg-assistant-prompts {
+  overflow: auto;
+  padding: 28px;
+}
+
+.hg-assistant-empty {
+  text-align: center;
+  padding: 40px 0 24px;
+}
+
+.hg-assistant-empty-icon {
+  color: #11dfcd;
+  font-size: 3rem;
+}
+
+.hg-assistant-empty h2 {
+  margin: 14px 0 0;
+  font-size: 1.95rem;
+}
+
+.hg-assistant-empty p {
+  margin: 8px 0 0;
+  color: #8a95ab;
+}
+
+.hg-assistant-group {
+  margin-top: 28px;
+}
+
+.hg-assistant-group h3 {
+  margin: 0 0 12px;
+  color: #11dfcd;
+  font-size: 0.98rem;
+}
+
+.hg-assistant-prompt {
+  width: 100%;
+  margin-top: 10px;
+  padding: 16px 18px;
+  border: 1px solid rgba(36, 51, 69, 0.52);
+  border-radius: 16px;
+  background: rgba(19, 24, 32, 0.9);
+  color: #f0f4f9;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.hg-assistant-inputbar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 14px;
+  padding: 18px 22px 18px;
+  border-top: 1px solid rgba(36, 51, 69, 0.4);
+  background: rgba(14, 19, 26, 0.92);
+}
+
+.hg-assistant-inputbar input {
+  min-height: 62px;
+  padding: 0 20px;
+  border: 1px solid rgba(45, 59, 79, 0.54);
+  border-radius: 18px;
+  background: #242933;
+  color: #f0f4f9;
+}
+
+.hg-assistant-inputbar button {
+  width: 76px;
+  min-height: 62px;
+  border: 0;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #118f7e, #0ea58f 70%, #16d8c2);
+  color: #051217;
+}

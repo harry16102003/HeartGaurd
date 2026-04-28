@@ -1,0 +1,280 @@
+.hg-diet-shell {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 55% 12%, rgba(17, 223, 205, 0.07), transparent 30%),
+    linear-gradient(180deg, #0a1016 0%, #0b1016 100%);
+  color: #f0f4f9;
+  font-family: "Outfit", sans-serif;
+}
+
+.hg-diet-shell * {
+  box-sizing: border-box;
+}
+
+.hg-diet-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #0f141b;
+  border-right: 1px solid rgba(35, 49, 67, 0.8);
+  min-height: 100vh;
+  padding: 14px 10px 10px;
+}
+
+.hg-diet-brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hg-diet-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: inherit;
+  text-decoration: none;
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+.hg-diet-heart {
+  color: #11dfcd;
+}
+
+.hg-diet-close {
+  border: 0;
+  background: transparent;
+  color: #7d879d;
+  font-size: 1.6rem;
+}
+
+.hg-diet-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 14px;
+}
+
+.hg-diet-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 38px;
+  padding: 0 12px;
+  border-radius: 12px;
+  color: inherit;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.hg-diet-nav-item.active {
+  background: rgba(10, 72, 65, 0.52);
+  color: #11dfcd;
+  font-weight: 600;
+}
+
+.hg-diet-nav-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+.hg-diet-sidebar-bottom {
+  border-top: 1px solid rgba(29, 42, 58, 0.86);
+  padding-top: 8px;
+}
+
+.hg-diet-sos,
+.hg-diet-logout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 14px;
+}
+
+.hg-diet-sos {
+  min-height: 44px;
+  background: #ef2727;
+  color: #fff5f5;
+  font-size: 0.98rem;
+  font-weight: 700;
+}
+
+.hg-diet-logout {
+  justify-content: flex-start;
+  color: #c8ceda;
+  min-height: 38px;
+  margin-top: 10px;
+  padding-left: 8px;
+}
+
+.hg-diet-main {
+  padding: 34px 38px 34px;
+}
+
+.hg-diet-header,
+.hg-diet-stats,
+.hg-diet-log-card,
+.hg-diet-plans {
+  width: min(100%, 1360px);
+  margin: 0 auto;
+}
+
+.hg-diet-header h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 3vw, 3.8rem);
+}
+
+.hg-diet-header p {
+  margin: 14px 0 0;
+  color: #8a95ab;
+}
+
+.hg-diet-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.hg-diet-stat-card,
+.hg-diet-log-card,
+.hg-diet-plan-card {
+  border: 1px solid rgba(36, 51, 69, 0.46);
+  border-radius: 18px;
+  background: #131820;
+}
+
+.hg-diet-stat-card {
+  min-height: 216px;
+  padding: 28px 26px;
+  text-align: center;
+}
+
+.hg-diet-stat-icon {
+  font-size: 2rem;
+}
+
+.hg-diet-stat-icon.amber {
+  color: #ffb302;
+}
+
+.hg-diet-stat-icon.blue {
+  color: #2c8cff;
+}
+
+.hg-diet-stat-icon.green {
+  color: #1bd165;
+}
+
+.hg-diet-stat-value {
+  margin-top: 14px;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hg-diet-stat-label {
+  margin-top: 6px;
+  color: #8a95ab;
+}
+
+.hg-diet-log-card {
+  margin-top: 30px;
+  padding: 28px;
+}
+
+.hg-diet-log-card h2,
+.hg-diet-plans h2 {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+.hg-diet-form-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 140px 160px 76px;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.hg-diet-form-row input,
+.hg-diet-form-row select {
+  min-height: 62px;
+  padding: 0 20px;
+  border: 1px solid rgba(45, 59, 79, 0.54);
+  border-radius: 18px;
+  background: #242933;
+  color: #f0f4f9;
+}
+
+.hg-diet-form-row button {
+  min-height: 62px;
+  border: 0;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #15e1c7, #18d5c6);
+  color: #051217;
+  font-size: 2rem;
+}
+
+.hg-diet-plans {
+  margin-top: 30px;
+}
+
+.hg-diet-plan-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.hg-diet-plan-card {
+  padding: 24px;
+}
+
+.hg-diet-plan-title {
+  color: #11dfcd;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.hg-diet-plan-list {
+  display: grid;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.hg-diet-plan-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.hg-diet-plan-name {
+  font-size: 0.98rem;
+  font-weight: 700;
+}
+
+.hg-diet-plan-type {
+  color: #7f89a0;
+  font-size: 0.88rem;
+}
+
+.hg-diet-plan-calories {
+  color: #11dfcd;
+  font-size: 0.96rem;
+  font-weight: 700;
+}
+
+.hg-diet-plan-total {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(45, 59, 79, 0.42);
+  color: #8a95ab;
+  text-align: right;
+  font-size: 0.96rem;
+  font-weight: 600;
+}
