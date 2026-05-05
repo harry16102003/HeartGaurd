@@ -7,7 +7,6 @@ import re
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
-from fastapi.staticfiles import StaticFiles
 from openpyxl import Workbook, load_workbook
 from pydantic import BaseModel
 
@@ -505,7 +504,19 @@ def serve_home():
     return FileResponse(FRONTEND_DIR / "index.html")
 
 
-app.mount("/", StaticFiles(directory=FRONTEND_DIR, html=True), name="frontend")
+@app.get("/{requested_path:path}")
+def serve_frontend_file(requested_path: str):
+    normalized_path = requested_path.strip("/")
+
+    if not normalized_path:
+        return FileResponse(FRONTEND_DIR / "index.html")
+
+    safe_path = (FRONTEND_DIR / normalized_path).resolve()
+
+    if safe_path.is_file() and FRONTEND_DIR.resolve() in safe_path.parents:
+        return FileResponse(safe_path)
+
+    raise HTTPException(status_code=404, detail="Not Found")
 
 
 if __name__ == "__main__":
