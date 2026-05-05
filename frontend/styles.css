@@ -48,8 +48,11 @@ svg {
   inset: auto;
   pointer-events: none;
   border-radius: 999px;
-  filter: blur(90px);
-  opacity: 0.42;
+  z-index: 0;
+  opacity: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
 }
 
 .ambient-left {
@@ -57,7 +60,7 @@ svg {
   left: 80px;
   width: 360px;
   height: 360px;
-  background: rgba(15, 226, 204, 0.09);
+  background-image: radial-gradient(circle, rgba(15, 226, 204, 0.18) 0%, rgba(15, 226, 204, 0.08) 38%, rgba(15, 226, 204, 0) 72%);
 }
 
 .ambient-right {
@@ -65,7 +68,7 @@ svg {
   right: -80px;
   width: 360px;
   height: 360px;
-  background: rgba(36, 173, 255, 0.08);
+  background-image: radial-gradient(circle, rgba(36, 173, 255, 0.18) 0%, rgba(36, 173, 255, 0.07) 34%, rgba(36, 173, 255, 0) 72%);
 }
 
 .site-header,

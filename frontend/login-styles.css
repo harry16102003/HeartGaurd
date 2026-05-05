@@ -47,9 +47,12 @@ svg {
 .login-ambient {
   position: absolute;
   border-radius: 999px;
-  filter: blur(90px);
   pointer-events: none;
-  opacity: 0.42;
+  z-index: 0;
+  opacity: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
 }
 
 .login-ambient-left {
@@ -57,7 +60,7 @@ svg {
   height: 280px;
   left: calc(50% - 260px);
   top: calc(50% - 120px);
-  background: rgba(19, 221, 202, 0.08);
+  background-image: radial-gradient(circle, rgba(19, 221, 202, 0.17) 0%, rgba(19, 221, 202, 0.08) 38%, rgba(19, 221, 202, 0) 72%);
 }
 
 .login-ambient-right {
@@ -65,7 +68,7 @@ svg {
   height: 320px;
   right: calc(50% - 320px);
   bottom: calc(50% - 160px);
-  background: rgba(19, 221, 202, 0.06);
+  background-image: radial-gradient(circle, rgba(36, 173, 255, 0.14) 0%, rgba(19, 221, 202, 0.06) 36%, rgba(19, 221, 202, 0) 72%);
 }
 
 .login-card {
