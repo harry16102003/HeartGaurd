@@ -6,6 +6,8 @@ from typing import Optional
 import re
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 from openpyxl import Workbook, load_workbook
 from pydantic import BaseModel
 
@@ -13,6 +15,7 @@ app = FastAPI()
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 DATA_DIR = BASE_DIR / "data" / "final"
+FRONTEND_DIR = BASE_DIR / "frontend"
 PREDICTIONS_FILE = DATA_DIR / "predictions_history.xlsx"
 PREDICTION_LOCK = Lock()
 PREDICTION_HEADERS = [
@@ -215,8 +218,8 @@ def build_prediction_record(payload: dict, risk: float, confidence: float) -> di
     return record
 
 
-@app.get("/")
-def home():
+@app.get("/api/health")
+def health():
     return {"message": "HeartGuard API Running"}
 
 
@@ -495,3 +498,17 @@ def answer_weight(_: str) -> str:
         "- watch portion size and liquid calories\n\n"
         "Even modest weight loss can improve cardiovascular markers if it is maintained."
     )
+
+
+@app.get("/")
+def serve_home():
+    return FileResponse(FRONTEND_DIR / "index.html")
+
+
+app.mount("/", StaticFiles(directory=FRONTEND_DIR, html=True), name="frontend")
+
+
+if __name__ == "__main__":
+    import uvicorn
+
+    uvicorn.run(app, host="127.0.0.1", port=8000)

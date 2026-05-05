@@ -90,7 +90,7 @@ async function askAssistant(question) {
   const typingRow = addMessage("bot", "Thinking...", { typing: true });
 
   try {
-    const response = await fetch("http://127.0.0.1:8000/chat", {
+    const response = await fetch(`${API_BASE_URL}/chat`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -111,3 +111,4 @@ async function askAssistant(question) {
     );
   }
 }
+const API_BASE_URL = window.location.protocol === "file:" ? "http://127.0.0.1:8000" : window.location.origin;
