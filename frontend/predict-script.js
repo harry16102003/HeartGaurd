@@ -1,28 +1,4 @@
-const DEFAULT_DOCTOR_API_BASE = "https://heartgaurd.onrender.com";
-const DOCTOR_API_OVERRIDE_KEY = "heartguardDoctorApiBase";
-
-function normalizeApiBaseUrl(value) {
-  return typeof value === "string" ? value.trim().replace(/\/+$/, "") : "";
-}
-
-function resolveCurrentOrigin() {
-  return window.location.protocol === "file:" ? "http://127.0.0.1:8000" : window.location.origin;
-}
-
-function resolveDoctorApiBase() {
-  const override = normalizeApiBaseUrl(localStorage.getItem(DOCTOR_API_OVERRIDE_KEY));
-  if (override) {
-    return override;
-  }
-
-  if (window.location.hostname === "heartgaurd.onrender.com") {
-    return resolveCurrentOrigin();
-  }
-
-  return DEFAULT_DOCTOR_API_BASE;
-}
-
-const API_BASE_URL = resolveDoctorApiBase();
+const API_BASE_URL = window.location.protocol === "file:" ? "http://127.0.0.1:8000" : window.location.origin;
 const FIELD_IDS = [
   "age",
   "sex",
@@ -100,9 +76,9 @@ async function handlePrediction(event) {
     storePrediction(result.record || buildLocalRecord(payload, result));
 
     if (result.source === "backend") {
-      setStatus("Prediction synced to the doctor Excel source and saved on this device.", "success");
+      setStatus("Prediction saved. The dashboard will keep this result even after refresh.", "success");
     } else {
-      setStatus("Doctor source is unavailable, so this estimate was saved only on this device.", "success");
+      setStatus("Backend is unavailable, so this estimate was saved locally on this device.", "success");
     }
   } catch (error) {
     predictionResult.classList.add("hidden");
@@ -223,9 +199,7 @@ function renderPredictionResult(result) {
   const risk = sanitizePercentage(result.risk);
   const { label, recommendation, toneClass, fillClass, badgeText } = describeRisk(risk);
   const resolvedLabel = result.label || label;
-  const sourceLabel = result.source === "backend"
-    ? "Source: Synced to doctor Excel and saved on this device"
-    : "Source: Saved only on this device";
+  const sourceLabel = result.source === "backend" ? "Source: Saved to Excel history" : "Source: Local estimate";
 
   resultScore.textContent = `${risk}%`;
   resultScore.className = `result-score ${toneClass}`;

@@ -1,32 +1,4 @@
-const DEFAULT_DOCTOR_API_BASE = "https://heartgaurd.onrender.com";
-const DOCTOR_API_OVERRIDE_KEY = "heartguardDoctorApiBase";
-
-function normalizeApiBaseUrl(value) {
-  return typeof value === "string" ? value.trim().replace(/\/+$/, "") : "";
-}
-
-function resolveCurrentOrigin() {
-  return window.location.protocol === "file:" ? "http://127.0.0.1:8000" : window.location.origin;
-}
-
-function resolveDoctorApiBase() {
-  const override = normalizeApiBaseUrl(localStorage.getItem(DOCTOR_API_OVERRIDE_KEY));
-  if (override) {
-    return override;
-  }
-
-  if (window.location.hostname === "heartgaurd.onrender.com") {
-    return resolveCurrentOrigin();
-  }
-
-  return DEFAULT_DOCTOR_API_BASE;
-}
-
-function isDoctorPortal() {
-  return window.location.hostname === "heartgaurd.onrender.com";
-}
-
-const API_BASE_URL = resolveDoctorApiBase();
+const API_BASE_URL = window.location.protocol === "file:" ? "http://127.0.0.1:8000" : window.location.origin;
 const DEFAULT_CALORIE_GOAL = 2000;
 const MEALS_KEY = "dietMeals";
 const WATER_KEY = "dietWater";
@@ -189,12 +161,6 @@ async function initializeDietPage() {
 }
 
 async function loadLatestPrediction() {
-  if (!isDoctorPortal()) {
-    const localPredictions = JSON.parse(localStorage.getItem("predictions")) || [];
-    const normalizedLocal = normalizePredictions(localPredictions);
-    return normalizedLocal.length ? normalizedLocal[normalizedLocal.length - 1] : null;
-  }
-
   try {
     const response = await fetch(`${API_BASE_URL}/predictions`);
     if (!response.ok) {
@@ -204,6 +170,7 @@ async function loadLatestPrediction() {
     const data = await response.json();
     const normalized = normalizePredictions(Array.isArray(data.items) ? data.items : []);
     if (normalized.length) {
+      localStorage.setItem("predictions", JSON.stringify(normalized));
       return normalized[normalized.length - 1];
     }
   } catch (error) {
