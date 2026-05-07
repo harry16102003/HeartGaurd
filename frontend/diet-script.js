@@ -1,6 +1,5 @@
 const DEFAULT_DOCTOR_API_BASE = "https://heartgaurd.onrender.com";
 const DOCTOR_API_OVERRIDE_KEY = "heartguardDoctorApiBase";
-const PORTAL_ROLE_KEY = "heartguardPortalRole";
 
 function normalizeApiBaseUrl(value) {
   return typeof value === "string" ? value.trim().replace(/\/+$/, "") : "";
@@ -24,7 +23,7 @@ function resolveDoctorApiBase() {
 }
 
 function isDoctorPortal() {
-  return window.location.hostname === "heartgaurd.onrender.com" || localStorage.getItem(PORTAL_ROLE_KEY) === "doctor";
+  return window.location.hostname === "heartgaurd.onrender.com";
 }
 
 const API_BASE_URL = resolveDoctorApiBase();
