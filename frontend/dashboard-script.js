@@ -1,4 +1,33 @@
-const API_BASE_URL = window.location.protocol === "file:" ? "http://127.0.0.1:8000" : window.location.origin;
+const DEFAULT_DOCTOR_API_BASE = "https://heartgaurd.onrender.com";
+const DOCTOR_API_OVERRIDE_KEY = "heartguardDoctorApiBase";
+const PORTAL_ROLE_KEY = "heartguardPortalRole";
+
+function normalizeApiBaseUrl(value) {
+  return typeof value === "string" ? value.trim().replace(/\/+$/, "") : "";
+}
+
+function resolveCurrentOrigin() {
+  return window.location.protocol === "file:" ? "http://127.0.0.1:8000" : window.location.origin;
+}
+
+function resolveDoctorApiBase() {
+  const override = normalizeApiBaseUrl(localStorage.getItem(DOCTOR_API_OVERRIDE_KEY));
+  if (override) {
+    return override;
+  }
+
+  if (window.location.hostname === "heartgaurd.onrender.com") {
+    return resolveCurrentOrigin();
+  }
+
+  return DEFAULT_DOCTOR_API_BASE;
+}
+
+function isDoctorPortal() {
+  return window.location.hostname === "heartgaurd.onrender.com" || localStorage.getItem(PORTAL_ROLE_KEY) === "doctor";
+}
+
+const API_BASE_URL = resolveDoctorApiBase();
 const rawMoodLogs = JSON.parse(localStorage.getItem("moodLogs")) || [];
 
 initDashboard();
@@ -15,6 +44,14 @@ async function initDashboard() {
 }
 
 async function loadPredictionHistory() {
+  if (!isDoctorPortal()) {
+    const localPredictions = JSON.parse(localStorage.getItem("predictions")) || [];
+    return {
+      predictions: normalizePredictions(localPredictions),
+      source: localPredictions.length ? "local" : "empty"
+    };
+  }
+
   try {
     const response = await fetch(`${API_BASE_URL}/predictions`);
     if (!response.ok) {
@@ -23,7 +60,6 @@ async function loadPredictionHistory() {
 
     const data = await response.json();
     const predictions = normalizePredictions(Array.isArray(data.items) ? data.items : []);
-    localStorage.setItem("predictions", JSON.stringify(predictions));
     return { predictions, source: "backend" };
   } catch (error) {
     const localPredictions = JSON.parse(localStorage.getItem("predictions")) || [];
@@ -241,7 +277,7 @@ function renderLatestPrediction(latestPrediction) {
   const description = describeRisk(latestPrediction.risk);
   latestRiskValue.textContent = `${Math.round(latestPrediction.risk)}%`;
   latestRiskLabel.textContent = `${latestPrediction.label} with ${Math.round(latestPrediction.confidence)}% confidence`;
-  latestPredictionDate.textContent = `Last saved: ${formatReadableDate(latestPrediction.date)} (${latestPrediction.source === "backend" ? "Excel history" : "local backup"})`;
+  latestPredictionDate.textContent = `Last saved: ${formatReadableDate(latestPrediction.date)} (${latestPrediction.source === "backend" ? "doctor Excel" : "patient device"})`;
   latestPredictionInputs.textContent = `Inputs used: ${latestPrediction.fieldsUsedCount || 0}/${latestPrediction.totalFields || 14}`;
   latestRecommendation.textContent = description.recommendation;
   latestRiskPill.textContent = description.label;
@@ -254,23 +290,25 @@ function updateHistoryStatus(source, totalPredictions) {
   historyStatus.classList.remove("success", "warning");
 
   if (source === "backend" && totalPredictions > 0) {
-    historyStatus.textContent = `Showing ${totalPredictions} saved prediction${totalPredictions === 1 ? "" : "s"} from Excel history.`;
+    historyStatus.textContent = `Showing ${totalPredictions} saved prediction${totalPredictions === 1 ? "" : "s"} from the doctor Excel source.`;
     historyStatus.classList.add("success");
     return;
   }
 
   if (source === "backend") {
-    historyStatus.textContent = "No saved predictions yet. Use the Predict page to create the first one.";
+    historyStatus.textContent = "No doctor-side predictions yet. Use the Predict page to create the first synced record.";
     return;
   }
 
   if (source === "local" && totalPredictions > 0) {
-    historyStatus.textContent = `Backend unavailable. Showing ${totalPredictions} locally saved prediction${totalPredictions === 1 ? "" : "s"}.`;
+    historyStatus.textContent = `Showing ${totalPredictions} prediction${totalPredictions === 1 ? "" : "s"} saved only on this patient device.`;
     historyStatus.classList.add("warning");
     return;
   }
 
-  historyStatus.textContent = "No prediction history found yet.";
+  historyStatus.textContent = isDoctorPortal()
+    ? "No prediction history found in the doctor source yet."
+    : "No patient-device prediction history found yet.";
 }
 
 function renderCharts(statsData) {
