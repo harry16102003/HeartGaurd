@@ -112,7 +112,7 @@ export default function LandingPage() {
           </p>
 
           <div className="hg-actions">
-            <a className="hg-button hg-button-primary" href="/login.html">Start Free</a>
+            <a className="hg-button hg-button-primary" href="/dashboard.html">Start Free</a>
             <a className="hg-button hg-button-secondary" href="/login.html">Login</a>
           </div>
         </section>
