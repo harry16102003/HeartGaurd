@@ -13,6 +13,8 @@
   --amber: #ffb302;
   --blue: #2c8cff;
   --green: #1bd165;
+  --shadow-soft: 0 16px 36px rgba(4, 10, 18, 0.34);
+  --shadow-card: 0 18px 44px rgba(2, 8, 16, 0.38);
 }
 
 * {
@@ -166,7 +168,7 @@ svg {
 }
 
 .diet-content {
-  padding: 34px 38px 34px;
+  padding: 34px 38px 42px;
 }
 
 .diet-header {
@@ -194,16 +196,17 @@ svg {
   border: 1px solid var(--panel-border-soft);
   border-radius: 18px;
   background: var(--panel);
+  box-shadow: var(--shadow-soft);
 }
 
 .diet-recommendation-card {
   display: grid;
-  gap: 18px;
+  gap: 20px;
   width: min(100%, 1360px);
   margin: 0 auto 24px;
-  padding: 24px 26px;
+  padding: 26px 28px;
   background:
-    radial-gradient(circle at top right, rgba(17, 223, 205, 0.08), transparent 26%),
+    radial-gradient(circle at top right, rgba(17, 223, 205, 0.12), transparent 28%),
     var(--panel);
 }
 
@@ -225,7 +228,7 @@ svg {
 
 .diet-recommendation-top h2 {
   margin: 8px 0 0;
-  font-size: 1.5rem;
+  font-size: clamp(1.4rem, 2.2vw, 1.8rem);
   line-height: 1.1;
 }
 
@@ -238,26 +241,31 @@ svg {
   font-size: 0.84rem;
   font-weight: 700;
   white-space: nowrap;
+  border: 1px solid transparent;
 }
 
 .diet-risk-badge.low {
   background: rgba(27, 209, 101, 0.14);
   color: var(--green);
+  border-color: rgba(27, 209, 101, 0.28);
 }
 
 .diet-risk-badge.moderate {
   background: rgba(255, 179, 2, 0.14);
   color: var(--amber);
+  border-color: rgba(255, 179, 2, 0.32);
 }
 
 .diet-risk-badge.high {
   background: rgba(239, 39, 39, 0.14);
   color: #ff9191;
+  border-color: rgba(239, 39, 39, 0.3);
 }
 
 .diet-risk-badge.neutral {
   background: rgba(125, 135, 157, 0.14);
   color: #b8c1d2;
+  border-color: rgba(125, 135, 157, 0.22);
 }
 
 .diet-recommendation-text {
@@ -266,6 +274,7 @@ svg {
   font-size: 1rem;
   line-height: 1.65;
 }
+
 
 .diet-guidance-grid {
   display: grid;
@@ -278,6 +287,12 @@ svg {
   border: 1px solid rgba(45, 59, 79, 0.42);
   border-radius: 16px;
   background: rgba(17, 22, 30, 0.68);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.diet-guidance-block:hover {
+  border-color: rgba(17, 223, 205, 0.32);
+  transform: translateY(-1px);
 }
 
 .diet-guidance-title {
@@ -304,6 +319,7 @@ svg {
   color: #bdf5ee;
   font-size: 0.86rem;
   font-weight: 600;
+  border: 1px solid rgba(17, 223, 205, 0.18);
 }
 
 .diet-guidance-chips.subdued .diet-guidance-chip {
@@ -329,6 +345,12 @@ svg {
   min-height: 216px;
   padding: 28px 26px;
   text-align: center;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.diet-stat-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(17, 223, 205, 0.24);
 }
 
 .stat-icon {
@@ -397,6 +419,12 @@ svg {
   font-size: 0.96rem;
   font-weight: 600;
   cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.ghost-action:hover {
+  transform: translateY(-1px);
+  background: rgba(44, 140, 255, 0.22);
 }
 
 .water-visual {
@@ -431,6 +459,7 @@ svg {
   width: min(100%, 1360px);
   margin: 30px auto 0;
   padding: 28px 28px 30px;
+  box-shadow: var(--shadow-card);
 }
 
 .section-head {
@@ -476,6 +505,14 @@ svg {
   font: inherit;
   font-size: 1rem;
   outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.meal-search-wrap input:focus,
+.compact-input:focus,
+.compact-select:focus {
+  border-color: rgba(17, 223, 205, 0.48);
+  box-shadow: 0 0 0 3px rgba(17, 223, 205, 0.12);
 }
 
 .meal-search-wrap input::placeholder,
@@ -540,6 +577,12 @@ svg {
   line-height: 1;
   cursor: pointer;
   box-shadow: 0 14px 34px rgba(17, 223, 205, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-meal-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 38px rgba(17, 223, 205, 0.26);
 }
 
 .quick-add-chips {
@@ -560,6 +603,13 @@ svg {
   font-size: 0.88rem;
   font-weight: 600;
   cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.quick-chip:hover {
+  transform: translateY(-1px);
+  background: rgba(17, 223, 205, 0.14);
+  border-color: rgba(17, 223, 205, 0.34);
 }
 
 .logged-meals {
@@ -583,6 +633,11 @@ svg {
   border: 1px solid rgba(45, 59, 79, 0.46);
   border-radius: 16px;
   background: rgba(19, 24, 32, 0.94);
+  transition: border-color 0.2s ease;
+}
+
+.logged-meal-item:hover {
+  border-color: rgba(17, 223, 205, 0.26);
 }
 
 .logged-meal-main {
@@ -651,6 +706,12 @@ svg {
 
 .meal-plan-card {
   padding: 24px 24px 22px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.meal-plan-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(17, 223, 205, 0.24);
 }
 
 .meal-plan-eyebrow {
@@ -738,6 +799,12 @@ svg {
   font-size: 0.82rem;
   font-weight: 700;
   cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.plan-add:hover {
+  transform: translateY(-1px);
+  background: rgba(17, 223, 205, 0.14);
 }
 
 .meal-plan-total {

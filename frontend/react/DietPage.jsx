@@ -2,26 +2,26 @@ import "./diet-page.css";
 
 const plans = [
   {
-    title: "Heart-Healthy Day",
+    title: "Indian Heart-Healthy Day",
     items: [
-      ["Oatmeal with berries & walnuts", "Breakfast", "350 kcal"],
-      ["Apple with almond butter", "Snack", "200 kcal"],
-      ["Grilled salmon with quinoa salad", "Lunch", "500 kcal"],
-      ["Mixed nuts & dark chocolate", "Snack", "180 kcal"],
-      ["Chicken breast with steamed vegetables", "Dinner", "450 kcal"]
+      ["Vegetable poha with peanuts", "Breakfast", "300 kcal"],
+      ["Roasted chana", "Snack", "140 kcal"],
+      ["2 chapati, dal & mixed sabzi", "Lunch", "430 kcal"],
+      ["Guava or pear", "Snack", "120 kcal"],
+      ["Palak dal with 2 chapati", "Dinner", "410 kcal"]
     ],
-    total: "1680 kcal"
+    total: "1400 kcal"
   },
   {
-    title: "Mediterranean Plan",
+    title: "Balanced Indian Plan",
     items: [
-      ["Greek yogurt with honey & granola", "Breakfast", "300 kcal"],
-      ["Hummus with veggie sticks", "Snack", "150 kcal"],
-      ["Whole-wheat pasta with olive oil & tomatoes", "Lunch", "480 kcal"],
+      ["Idli with sambar", "Breakfast", "280 kcal"],
+      ["Sprouts chaat (low salt)", "Snack", "170 kcal"],
+      ["Rajma with brown rice", "Lunch", "470 kcal"],
       ["Handful of almonds", "Snack", "160 kcal"],
-      ["Grilled fish with roasted vegetables", "Dinner", "420 kcal"]
+      ["Lauki chana dal with 2 chapati", "Dinner", "390 kcal"]
     ],
-    total: "1510 kcal"
+    total: "1470 kcal"
   }
 ];
 

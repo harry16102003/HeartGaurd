@@ -38,21 +38,103 @@ const mealLibrary = [
   { name: "Greek yogurt with seeds & fruit", calories: 290, type: "Breakfast", icon: "🥣", tags: ["heart", "sugar"] },
   { name: "Vegetable omelet with whole-grain toast", calories: 320, type: "Breakfast", icon: "🍳", tags: ["heart", "weight"] },
   { name: "Besan chilla with mint curd", calories: 310, type: "Breakfast", icon: "🫓", tags: ["sugar", "weight"] },
+  { name: "Vegetable poha with peanuts", calories: 300, type: "Breakfast", icon: "🍲", tags: ["heart", "weight"] },
+  { name: "Vegetable upma", calories: 320, type: "Breakfast", icon: "🍲", tags: ["sugar", "weight"] },
+  { name: "Idli with sambar", calories: 280, type: "Breakfast", icon: "🍚", tags: ["sodium", "heart"] },
+  { name: "Ragi dosa with chutney", calories: 300, type: "Breakfast", icon: "🥞", tags: ["sugar", "heart"] },
+  { name: "Multigrain paratha with curd", calories: 360, type: "Breakfast", icon: "🫓", tags: ["weight", "sugar"] },
+  { name: "Moong dal cheela", calories: 290, type: "Breakfast", icon: "🫓", tags: ["heart", "sugar"] },
+  { name: "Vegetable oats cheela", calories: 300, type: "Breakfast", icon: "🥣", tags: ["cholesterol", "weight"] },
+  { name: "Daliya porridge", calories: 280, type: "Breakfast", icon: "🥣", tags: ["sugar", "weight"] },
+  { name: "Pesarattu with chutney", calories: 310, type: "Breakfast", icon: "🥞", tags: ["heart", "sugar"] },
+  { name: "Thepla with curd", calories: 320, type: "Breakfast", icon: "🫓", tags: ["weight", "sugar"] },
+  { name: "Handvo", calories: 300, type: "Breakfast", icon: "🍲", tags: ["heart", "weight"] },
+  { name: "Dhokla (steamed)", calories: 220, type: "Breakfast", icon: "🍰", tags: ["sugar", "weight"] },
+  { name: "Litti (baked) with chokha", calories: 360, type: "Breakfast", icon: "🫓", tags: ["heart", "sugar"] },
+  { name: "Chirer pulao (poha style)", calories: 290, type: "Breakfast", icon: "🍲", tags: ["weight", "sugar"] },
   { name: "Apple with almond butter", calories: 200, type: "Snack", icon: "🍎", tags: ["cholesterol", "weight"] },
   { name: "Hummus with veggie sticks", calories: 150, type: "Snack", icon: "🥕", tags: ["sodium", "sugar"] },
   { name: "Handful of almonds", calories: 160, type: "Snack", icon: "🥜", tags: ["cholesterol", "heart"] },
   { name: "Guava or pear", calories: 120, type: "Snack", icon: "🍐", tags: ["sugar", "weight"] },
+  { name: "Roasted chana", calories: 140, type: "Snack", icon: "🥜", tags: ["cholesterol", "sugar"] },
+  { name: "Sprouts chaat (low salt)", calories: 170, type: "Snack", icon: "🥗", tags: ["heart", "sugar"] },
+  { name: "Makhana (fox nuts) roasted", calories: 130, type: "Snack", icon: "🍿", tags: ["weight", "sugar"] },
+  { name: "Cucumber tomato chaat", calories: 110, type: "Snack", icon: "🥗", tags: ["sodium", "heart"] },
+  { name: "Fruit chaat", calories: 140, type: "Snack", icon: "🍉", tags: ["heart", "sugar"] },
+  { name: "Buttermilk (chaas)", calories: 80, type: "Snack", icon: "🥛", tags: ["sodium", "weight"] },
+  { name: "Moong sprouts salad", calories: 150, type: "Snack", icon: "🥗", tags: ["heart", "sugar"] },
+  { name: "Peanut sundal", calories: 170, type: "Snack", icon: "🥜", tags: ["cholesterol", "sugar"] },
+  { name: "Jhal muri (light oil)", calories: 150, type: "Snack", icon: "🍿", tags: ["sodium", "weight"] },
+  { name: "Bhel (light sev)", calories: 170, type: "Snack", icon: "🥗", tags: ["sodium", "sugar"] },
+  { name: "Roasted peanuts with onion", calories: 180, type: "Snack", icon: "🥜", tags: ["heart", "sugar"] },
+  { name: "Steamed corn chaat", calories: 140, type: "Snack", icon: "🌽", tags: ["weight", "sugar"] },
   { name: "Grilled salmon with quinoa salad", calories: 500, type: "Lunch", icon: "🐟", tags: ["cholesterol", "heart"] },
   { name: "Brown rice, dal & sauteed vegetables", calories: 460, type: "Lunch", icon: "🍚", tags: ["sodium", "sugar"] },
   { name: "Moong dal khichdi with vegetables", calories: 390, type: "Lunch", icon: "🥣", tags: ["sodium", "sugar", "weight"] },
   { name: "Whole-wheat pasta with olive oil & tomatoes", calories: 480, type: "Lunch", icon: "🍝", tags: ["heart"] },
+  { name: "2 chapati, dal & mixed sabzi", calories: 430, type: "Lunch", icon: "🫓", tags: ["sodium", "sugar", "weight"] },
+  { name: "Rajma with brown rice", calories: 470, type: "Lunch", icon: "🍛", tags: ["heart", "sugar"] },
+  { name: "Sambar rice with salad", calories: 420, type: "Lunch", icon: "🍛", tags: ["sodium", "heart"] },
+  { name: "Chole with 2 chapati", calories: 460, type: "Lunch", icon: "🍛", tags: ["sugar", "weight"] },
+  { name: "Lobia curry with brown rice", calories: 440, type: "Lunch", icon: "🍛", tags: ["heart", "sugar"] },
+  { name: "Vegetable sambar with red rice", calories: 430, type: "Lunch", icon: "🍚", tags: ["sodium", "heart"] },
+  { name: "Toor dal with millet roti", calories: 420, type: "Lunch", icon: "🫓", tags: ["heart", "weight"] },
+  { name: "Curd rice with cucumber", calories: 390, type: "Lunch", icon: "🍚", tags: ["sodium", "sugar"] },
+  { name: "Vegetable millet khichdi", calories: 400, type: "Lunch", icon: "🥣", tags: ["weight", "sugar"] },
+  { name: "Bhindi sabzi with 2 chapati", calories: 410, type: "Lunch", icon: "🫓", tags: ["heart", "weight"] },
+  { name: "Methi dal with 2 chapati", calories: 420, type: "Lunch", icon: "🫓", tags: ["heart", "sugar"] },
+  { name: "Gujarati dal with 2 phulka", calories: 410, type: "Lunch", icon: "🫓", tags: ["heart", "sugar"] },
+  { name: "Undhiyu with millet roti", calories: 430, type: "Lunch", icon: "🥘", tags: ["weight", "heart"] },
+  { name: "Kadhi with brown rice", calories: 400, type: "Lunch", icon: "🍚", tags: ["sodium", "weight"] },
+  { name: "Misal (light farsan) with pav", calories: 440, type: "Lunch", icon: "🍲", tags: ["sodium", "sugar"] },
+  { name: "Matki usal with 2 chapati", calories: 420, type: "Lunch", icon: "🫓", tags: ["heart", "weight"] },
+  { name: "Bengali masoor dal with red rice", calories: 420, type: "Lunch", icon: "🍚", tags: ["heart", "sugar"] },
+  { name: "Cholar dal with 2 roti", calories: 430, type: "Lunch", icon: "🫓", tags: ["sugar", "weight"] },
+  { name: "Assamese tenga fish with rice", calories: 440, type: "Lunch", icon: "🐟", tags: ["cholesterol", "heart"] },
+  { name: "Muri ghonto with salad", calories: 390, type: "Lunch", icon: "🍛", tags: ["weight", "sugar"] },
   { name: "Chicken breast with steamed vegetables", calories: 450, type: "Dinner", icon: "🍗", tags: ["weight", "sugar"] },
   { name: "Grilled fish with roasted vegetables", calories: 420, type: "Dinner", icon: "🐟", tags: ["cholesterol", "heart"] },
   { name: "Mediterranean bowl", calories: 520, type: "Dinner", icon: "🥗", tags: ["heart", "cholesterol"] },
-  { name: "Lentil soup with salad", calories: 360, type: "Dinner", icon: "🥣", tags: ["sodium", "weight"] }
+  { name: "Lentil soup with salad", calories: 360, type: "Dinner", icon: "🥣", tags: ["sodium", "weight"] },
+  { name: "Palak dal with 2 chapati", calories: 410, type: "Dinner", icon: "🥬", tags: ["heart", "sodium"] },
+  { name: "Lauki chana dal with 2 chapati", calories: 390, type: "Dinner", icon: "🍲", tags: ["sugar", "weight"] },
+  { name: "Tinda sabzi with 2 phulka", calories: 370, type: "Dinner", icon: "🫓", tags: ["weight", "heart"] },
+  { name: "Turai dal with 2 chapati", calories: 380, type: "Dinner", icon: "🍲", tags: ["sugar", "weight"] },
+  { name: "Vegetable stew with appam", calories: 400, type: "Dinner", icon: "🥘", tags: ["sodium", "heart"] },
+  { name: "Paneer bhurji with 2 chapati", calories: 430, type: "Dinner", icon: "🫓", tags: ["sugar", "weight"] },
+  { name: "Fish curry with red rice", calories: 450, type: "Dinner", icon: "🐟", tags: ["cholesterol", "heart"] },
+  { name: "Mixed veg curry with millet roti", calories: 390, type: "Dinner", icon: "🫓", tags: ["heart", "weight"] },
+  { name: "Tomato rasam with brown rice", calories: 360, type: "Dinner", icon: "🍲", tags: ["sodium", "weight"] },
+  { name: "Bengali lau ghonto with 2 roti", calories: 370, type: "Dinner", icon: "🫓", tags: ["heart", "weight"] },
+  { name: "Shukto with 2 phulka", calories: 380, type: "Dinner", icon: "🍲", tags: ["sugar", "weight"] },
+  { name: "Mochar ghonto with 2 roti", calories: 390, type: "Dinner", icon: "🫓", tags: ["heart", "weight"] },
+  { name: "Khatta moong with red rice", calories: 390, type: "Dinner", icon: "🍚", tags: ["sugar", "weight"] },
+  { name: "Odia dalma with brown rice", calories: 410, type: "Dinner", icon: "🍚", tags: ["heart", "sugar"] },
+  { name: "Gujarati sev tameta (light sev) with 2 phulka", calories: 400, type: "Dinner", icon: "🫓", tags: ["sodium", "weight"] },
+  { name: "Palak chole with 2 chapati", calories: 420, type: "Dinner", icon: "🫓", tags: ["heart", "sugar"] },
+  { name: "Chicken stew with red rice", calories: 430, type: "Dinner", icon: "🍗", tags: ["weight", "heart"] }
 ];
 
 const mealIndex = Object.fromEntries(mealLibrary.map((meal) => [meal.name, meal]));
+const INDIAN_FEATURED_MEALS = [
+  "Idli with sambar",
+  "Ragi dosa with chutney",
+  "Vegetable stew with appam",
+  "2 chapati, dal & mixed sabzi",
+  "Rajma with brown rice",
+  "Palak chole with 2 chapati",
+  "Thepla with curd",
+  "Gujarati dal with 2 phulka",
+  "Undhiyu with millet roti",
+  "Bengali masoor dal with red rice",
+  "Odia dalma with brown rice",
+  "Assamese tenga fish with rice",
+  "Vegetable poha with peanuts",
+  "Vegetable upma",
+  "Moong dal cheela",
+  "Makhana (fox nuts) roasted",
+  "Fish curry with red rice"
+];
 
 const PLAN_LIBRARY = {
   "heart-balance": {
@@ -60,11 +142,11 @@ const PLAN_LIBRARY = {
     title: "Heart Balance Day",
     description: "A dependable whole-food plan with fiber, lean protein, and steady meals through the day.",
     meals: [
-      getMeal("Oatmeal with berries & walnuts"),
-      getMeal("Apple with almond butter"),
-      getMeal("Grilled salmon with quinoa salad"),
-      getMeal("Handful of almonds"),
-      getMeal("Chicken breast with steamed vegetables")
+      getMeal("Vegetable poha with peanuts"),
+      getMeal("Roasted chana"),
+      getMeal("2 chapati, dal & mixed sabzi"),
+      getMeal("Guava or pear"),
+      getMeal("Palak dal with 2 chapati")
     ]
   },
   "low-sodium": {
@@ -72,11 +154,11 @@ const PLAN_LIBRARY = {
     title: "Lower Sodium Plan",
     description: "Built to reduce excess salt while keeping potassium-rich and fresh foods in the mix.",
     meals: [
-      getMeal("Vegetable omelet with whole-grain toast"),
-      getMeal("Hummus with veggie sticks"),
+      getMeal("Idli with sambar"),
+      getMeal("Sprouts chaat (low salt)"),
       getMeal("Brown rice, dal & sauteed vegetables"),
       getMeal("Guava or pear"),
-      getMeal("Lentil soup with salad")
+      getMeal("Lauki chana dal with 2 chapati")
     ]
   },
   "steady-sugar": {
@@ -87,8 +169,8 @@ const PLAN_LIBRARY = {
       getMeal("Besan chilla with mint curd"),
       getMeal("Guava or pear"),
       getMeal("Moong dal khichdi with vegetables"),
-      getMeal("Handful of almonds"),
-      getMeal("Chicken breast with steamed vegetables")
+      getMeal("Roasted chana"),
+      getMeal("Palak dal with 2 chapati")
     ]
   },
   "cholesterol-support": {
@@ -97,10 +179,10 @@ const PLAN_LIBRARY = {
     description: "Leans on oats, legumes, fish, nuts, and olive-oil-style meals while limiting heavy fried options.",
     meals: [
       getMeal("Oatmeal with berries & walnuts"),
-      getMeal("Apple with almond butter"),
-      getMeal("Grilled salmon with quinoa salad"),
-      getMeal("Hummus with veggie sticks"),
-      getMeal("Mediterranean bowl")
+      getMeal("Sprouts chaat (low salt)"),
+      getMeal("Rajma with brown rice"),
+      getMeal("Handful of almonds"),
+      getMeal("Lauki chana dal with 2 chapati")
     ]
   },
   "weight-balance": {
@@ -108,10 +190,10 @@ const PLAN_LIBRARY = {
     title: "Weight Balance Plan",
     description: "Moderate calories, high fiber, and simpler plates to support gradual and sustainable weight control.",
     meals: [
-      getMeal("Greek yogurt with seeds & fruit"),
+      getMeal("Vegetable upma"),
       getMeal("Guava or pear"),
       getMeal("Moong dal khichdi with vegetables"),
-      getMeal("Hummus with veggie sticks"),
+      getMeal("Roasted chana"),
       getMeal("Lentil soup with salad")
     ]
   },
@@ -120,11 +202,11 @@ const PLAN_LIBRARY = {
     title: "Protective Heart Plan",
     description: "A tighter, more protective pattern for higher-risk profiles with extra focus on low-salt, high-fiber meals.",
     meals: [
-      getMeal("Oatmeal with berries & walnuts"),
-      getMeal("Hummus with veggie sticks"),
+      getMeal("Idli with sambar"),
+      getMeal("Sprouts chaat (low salt)"),
       getMeal("Brown rice, dal & sauteed vegetables"),
-      getMeal("Handful of almonds"),
-      getMeal("Grilled fish with roasted vegetables")
+      getMeal("Roasted chana"),
+      getMeal("Palak dal with 2 chapati")
     ]
   },
   "maintain-wellness": {
@@ -132,11 +214,11 @@ const PLAN_LIBRARY = {
     title: "Maintain Good Momentum",
     description: "For lower-risk days, this keeps variety and heart-friendly habits in place without being restrictive.",
     meals: [
-      getMeal("Greek yogurt with seeds & fruit"),
+      getMeal("Vegetable poha with peanuts"),
       getMeal("Apple with almond butter"),
-      getMeal("Whole-wheat pasta with olive oil & tomatoes"),
+      getMeal("Sambar rice with salad"),
       getMeal("Handful of almonds"),
-      getMeal("Mediterranean bowl")
+      getMeal("Lauki chana dal with 2 chapati")
     ]
   }
 };
@@ -161,20 +243,27 @@ async function initializeDietPage() {
 }
 
 async function loadLatestPrediction() {
-  try {
-    const response = await fetch(`${API_BASE_URL}/predictions`);
-    if (!response.ok) {
-      throw new Error(`History request failed with ${response.status}`);
-    }
+  const endpoints = uniqueList([
+    `${API_BASE_URL}/predictions`,
+    "http://127.0.0.1:8000/predictions"
+  ]);
 
-    const data = await response.json();
-    const normalized = normalizePredictions(Array.isArray(data.items) ? data.items : []);
-    if (normalized.length) {
-      localStorage.setItem("predictions", JSON.stringify(normalized));
-      return normalized[normalized.length - 1];
+  for (const endpoint of endpoints) {
+    try {
+      const response = await fetch(endpoint);
+      if (!response.ok) {
+        continue;
+      }
+
+      const data = await response.json();
+      const normalized = normalizePredictions(Array.isArray(data.items) ? data.items : []);
+      if (normalized.length) {
+        localStorage.setItem("predictions", JSON.stringify(normalized));
+        return normalized[normalized.length - 1];
+      }
+    } catch (error) {
+      // Try the next endpoint and then local fallback.
     }
-  } catch (error) {
-    // Fall back to local history when the backend is unavailable.
   }
 
   const localPredictions = JSON.parse(localStorage.getItem("predictions")) || [];
@@ -210,7 +299,8 @@ function buildDietProfile(prediction) {
     "Vegetables at most meals",
     "Whole grains and oats",
     "Lean protein or legumes",
-    "Water through the day"
+    "Water through the day",
+    "Indian home-style meals: chapati, dal, rice in balanced portions"
   ];
   const baseAvoid = [
     "Deep-fried foods",
@@ -532,16 +622,24 @@ function addWaterGlass() {
 }
 
 function handleMealSearch() {
-  const query = mealSearchInput.value.trim().toLowerCase();
-  const matches = mealLibrary
-    .filter((meal) => meal.name.toLowerCase().includes(query))
-    .slice(0, 6);
-
+  const rawQuery = mealSearchInput.value.trim();
+  const query = rawQuery.toLowerCase();
+  const normalizedQuery = normalizeSearchText(rawQuery);
   if (!query) {
     mealSuggestions.classList.add("hidden");
     mealSuggestions.innerHTML = "";
     return;
   }
+
+  const matches = mealLibrary
+    .filter((meal) => {
+      const text = `${meal.name} ${meal.type}`.toLowerCase();
+      const normalizedText = normalizeSearchText(`${meal.name} ${meal.type}`);
+      return text.includes(query)
+        || normalizedText.includes(normalizedQuery)
+        || matchesIndianAlias(meal.name, query);
+    })
+    .slice(0, 8);
 
   if (!matches.length) {
     mealSuggestions.classList.remove("hidden");
@@ -633,6 +731,32 @@ function formatTime(value) {
     hour: "numeric",
     minute: "2-digit"
   }).format(date);
+}
+
+function matchesIndianAlias(mealName, query) {
+  const name = mealName.toLowerCase();
+  const aliases = {
+    chapati: ["chapati", "roti", "phulka"],
+    dal: ["dal", "daal", "lentil"],
+    rice: ["rice", "brown rice", "sambar rice", "khichdi"],
+    idli: ["idli"],
+    sambar: ["sambar", "sambhar"],
+    poha: ["poha"],
+    upma: ["upma"],
+    rajma: ["rajma"],
+    chana: ["chana", "chickpea"],
+    khichdi: ["khichdi"]
+  };
+
+  return Object.values(aliases).some((words) => words.includes(query) && words.some((word) => name.includes(word)));
+}
+
+function normalizeSearchText(value) {
+  return String(value || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function escapeHtml(value) {
